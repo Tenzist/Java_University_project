@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="305.0" minWidth="286.0" prefHeight="442.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oleh.pakhomov.SceneController">
+    <children>
+        <LineChart fx:id="graph" layoutX="3.0" layoutY="29.0" prefHeight="294.0" prefWidth="584.0" title="График функции">
+            <xAxis>
+                <NumberAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+        </LineChart>
+        <Text fx:id="result" layoutX="184.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="202.0" />
+        <Text fx:id="contextHelp" layoutX="14.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Здесь контекстная помощь" visible="false" wrappingWidth="155.13671875" />
+        <Button fx:id="saveButton" layoutX="422.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#onSaveClick" prefHeight="31.0" prefWidth="119.0" text="↑" />
+        <Button fx:id="loadButton" layoutX="422.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#onLoadClick" prefHeight="31.0" prefWidth="119.0" text="↓" />
+        <Button fx:id="calcButton" layoutX="184.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#onCalculateClick" prefHeight="48.0" prefWidth="202.0" text="Вычислить" />
+        <TextField fx:id="endX" layoutX="241.0" layoutY="325.0" prefHeight="25.0" prefWidth="139.0" promptText="Введите максимум" text="2.2" />
+        <ImageView fx:id="infoEndX" fitHeight="25.0" fitWidth="73.0" layoutX="174.0" layoutY="325.0" onMouseEntered="#onEndHover" onMouseExited="#onHoverStop" opacity="0.0" pickOnBounds="true" preserveRatio="true" />
+        <Text layoutX="38.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x0 = " wrappingWidth="34.9765625" />
+        <TextField fx:id="startX" editable="false" layoutX="73.0" layoutY="324.0" opacity="0.5" prefHeight="25.0" prefWidth="35.0" promptText="double" text="1" />
+        <ImageView fx:id="infoStartX" fitHeight="24.0" fitWidth="80.0" layoutX="32.0" layoutY="325.0" onMouseEntered="#onStartHover" onMouseExited="#onHoverStop" opacity="0.0" pickOnBounds="true" preserveRatio="true" />
+        <Text layoutX="39.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="h = " wrappingWidth="44.0" />
+        <TextField fx:id="step" editable="false" layoutX="73.0" layoutY="354.0" opacity="0.5" prefHeight="25.0" prefWidth="35.0" promptText="double" text="0.1" />
+        <ImageView fx:id="infoStep" fitHeight="24.0" fitWidth="67.0" layoutX="41.0" layoutY="354.0" onMouseEntered="#onStepHover" onMouseExited="#onHoverStop" opacity="0.0" pickOnBounds="true" preserveRatio="true" />
+        <Text layoutX="38.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ԑ = " wrappingWidth="24.0" />
+        <TextField fx:id="accuracy" editable="false" layoutX="73.0" layoutY="382.0" opacity="0.5" prefHeight="25.0" prefWidth="35.0" promptText="double" text="0.01" />
+        <ImageView fx:id="infoAccuracy" fitHeight="24.0" fitWidth="84.0" layoutX="30.0" layoutY="383.0" onMouseEntered="#onAccuracyHover" onMouseExited="#onHoverStop" opacity="0.0" pickOnBounds="true" preserveRatio="true" />
+        <Text layoutX="184.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите x : " wrappingWidth="66.9765625" />
+      <Text layoutX="8.0" layoutY="18.0" onMouseClicked="#OnMouseClickAbout" strokeType="OUTSIDE" strokeWidth="0.0" text="About" wrappingWidth="44.0" />
+    </children>
+</Pane>

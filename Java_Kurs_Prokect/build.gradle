@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.beryx.jlink' version '2.10.4'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id "org.javamodularity.moduleplugin" version "1.5.0"
+}
+
+group 'com.oleh.pakhomov'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.7.1'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.oleh.pakhomov'
+    mainClass = 'com.oleh.pakhomov.MathApplication'
+}
+
+javafx {
+    version = '17.0.0.1'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation("com.google.code.gson:gson:2.8.9")
+    implementation "org.testfx:testfx-core:4.0.15-alpha"
+    implementation 'junit:junit:4.13.2'
+    implementation "org.testfx:testfx-junit:4.0.15-alpha"
+    implementation group: 'org.assertj', name: 'assertj-core', version: '3.13.2'
+}
+
+test {
+    useJUnit()
+    jvmArgs = [
+            '--add-opens', "$moduleName/com.oleh.pakhomov=org.testfx.junit5",
+            '--add-opens', 'javafx.graphics/com.sun.javafx.application=org.testfx'
+    ]
+}
+
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher{
+        name = "$moduleName"
+    }
+}
+

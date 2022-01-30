@@ -1,0 +1,21 @@
+Просто Список[
+BandsTour = Group: ElPrimo | Leader: David | City: Lviv | Year: 2060 | Concert amount: 10, 
+BandsTour = Group: Avangard | Leader: Niko | City: Kiev | Year: 2010 | Concert amount: 11, 
+BandsTour = Group: Ninjas | Leader: Adren | City: Berlin | Year: 2022 | Concert amount: 26, 
+BandsTour = Group: Pugi | Leader: Kirill | City: Amigo | Year: 2009 | Concert amount: 50, 
+BandsTour = Group: Name | Leader: Owner | City: City | Year: 1999 | Concert amount: 2, 
+BandsTour = Group: SUS | Leader: Zeus | City: Amsterdam | Year: 2021 | Concert amount: 25]
+Сортировка по концертам[
+BandsTour = Group: Name | Leader: Owner | City: City | Year: 1999 | Concert amount: 2, 
+BandsTour = Group: ElPrimo | Leader: David | City: Lviv | Year: 2060 | Concert amount: 10, 
+BandsTour = Group: Avangard | Leader: Niko | City: Kiev | Year: 2010 | Concert amount: 11, 
+BandsTour = Group: SUS | Leader: Zeus | City: Amsterdam | Year: 2021 | Concert amount: 25, 
+BandsTour = Group: Ninjas | Leader: Adren | City: Berlin | Year: 2022 | Concert amount: 26, 
+BandsTour = Group: Pugi | Leader: Kirill | City: Amigo | Year: 2009 | Concert amount: 50]
+Сортировка по городам[
+BandsTour = Group: Pugi | Leader: Kirill | City: Amigo | Year: 2009 | Concert amount: 50, 
+BandsTour = Group: SUS | Leader: Zeus | City: Amsterdam | Year: 2021 | Concert amount: 25, 
+BandsTour = Group: Ninjas | Leader: Adren | City: Berlin | Year: 2022 | Concert amount: 26, 
+BandsTour = Group: Name | Leader: Owner | City: City | Year: 1999 | Concert amount: 2, 
+BandsTour = Group: Avangard | Leader: Niko | City: Kiev | Year: 2010 | Concert amount: 11, 
+BandsTour = Group: ElPrimo | Leader: David | City: Lviv | Year: 2060 | Concert amount: 10]
