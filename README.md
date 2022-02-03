@@ -1,3 +1,3 @@
-# Java University project
+# Java University projects
 University projects that were made while studying at the university,
 that consists of 6 laboratory works and course work
